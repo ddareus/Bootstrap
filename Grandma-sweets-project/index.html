@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- main css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- font awesome-->
+    <script src="./js/all.js"></script>
+    <title>Grandma's Sweets Project</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <header id="header">
+        <nav class="navbar navbar-expand-lg px-4">
+            <!-- 
+    https://www.iconfinder.com/icons/2427887/dessert_donut_doughnut_fat_sweets_icon
+    Creative Commons (Attribution 3.0 Unported);
+    https://www.iconfinder.com/korawan_m
+        -->
+            <a href="#" class="navbar-brand">
+                <img src="images/logo.svg" alt="Grandma's Sweets Logo">
+            </a>
+            <!-- Toggler Menu Icon on Medium & Small Screen -->
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+                <span class="toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav text-capitalize mx-auto">
+                    <li class="nav-item active">
+                        <a href="#header" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#about" class="nav-link">about</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#store" class="nav-link">store</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#services" class="nav-link">services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#cakes" class="nav-link">orders</a>
+                    </li>
+                </ul>
+                <div class="nav-info-items d-none d-lg-flex">
+                    <!-- Single Info -->
+                    <div v class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                        <span class="info-icon mx-lg-3">
+                            <i class="fas fa-phone fa-flip-horizontal"></i>
+                        </span>
+                        <p class="mb-0">+ 509 3333 3333</p>
+                    </div>
+                    <!-- Single Info -->
+                    <div id="cart-info"
+                        class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <span class="cart-info__icon mr-lg-3">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                        <p class="mb-0 text-capitalize">
+                            <span id="item-count">2</span>
+                            items - $
+                            <span class="item-total">
+                                10.49
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Of Nav Bar -->
+
+        <!-- Banner -->
+        <div class="container-fluid">
+            <div class="row max-height justify-content-center align-items-center">
+                <div class="col-10 mx-auto banner text-center">
+                    <h1 class="text-capitalize">
+                        Welcome to <strong class="banner-title">grandma's</strong>
+                    </h1>
+                    <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
+                </div>
+                <!-- cart -->
+                <div class="cart" id="cart">
+                    <!-- cart item -->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="images-cart/cake-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuMenu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuMenu">
+                                <button class="dropdown-item" type="button">2</button>
+                                <button class="dropdown-item" type="button">3</button>
+                                <button class="dropdown-item" type="button">4</button>
+                            </div>
+                        </div>
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">
+                                cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!-- end of cart item -->
+                    <!-- cart item -->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="images-cart/cupcake-1.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuMenu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuMenu">
+                                <button class="dropdown-item" type="button">2</button>
+                                <button class="dropdown-item" type="button">3</button>
+                                <button class="dropdown-item" type="button">4</button>
+                            </div>
+                        </div>
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">
+                                cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!-- end of cart item -->
+                    <!-- total -->
+                    <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+                        <h5>total</h5>
+                        <h5>$ <strong id="cart-total" class="font-weight-bold">21.98</strong></h5>
+                    </div>
+                    <!-- end of total -->
+                    <!-- cart buttons -->
+                    <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+                        <a href="#" id="clear-cart" class="btn btn-black text-uppercase clear-cart">clear cart</a>
+                        <a href="#" id="clear-cart" class="btn btn-pink text-uppercase check-out">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Of Banner -->
+    </header>
+    <!-- End of Header -->
+
+    <!-- About Section -->
+    <section class="about py-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h1 class="text-capitalize">about <strong class="banner-title">us</strong></h1>
+                    <p class="my-4 text-muted w-75">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam hic molestias totam expedita
+                        nostrum enim ducimus necessitatibus facilis aperiam est, similique recusandae aspernatur
+                        reprehenderit tempora commodi aliquid nesciunt deleniti sequi, provident esse nam repudiandae,
+                        sunt dolore voluptatem. Saepe ea aperiam facilis magni officia architecto laborum, inventore
+                        cumque eligendi ullam quos, fuga eius asperiores iste maxime sapiente, exercitationem at quam
+                        molestias. Odit dolor quam ex quaerat illo vel quos voluptatem sunt!
+                    </p>
+                    <a href="#" class="btn btn-outline-secondary about-us-link text-uppercase">explore</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+                    <div class="about-img__container">
+                        <img src="./images/sweets-1.jpeg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Section -->
+
+    <!-- Store Section -->
+    <section id="store" class="store py-5">
+        <div class="container">
+            <!-- Store Section Title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title">store</strong va></h1>
+                </div>
+            </div>
+            <!-- End of Store Section Title -->
+            <!-- Filter buttons -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
+                    <a href="#" class="btn our-store-link text-uppercase filter-btn m-2" data-filter="all">all</a>
+                    <a href="#" class="btn our-store-link text-uppercase filter-btn m-2" data-filter="all">cakes</a>
+                    <a href="#" class="btn our-store-link text-uppercase filter-btn m-2" data-filter="all">cupcakes</a>
+                    <a href="#" class="btn our-store-link text-uppercase filter-btn m-2" data-filter="all">sweets</a>
+                    <a href="#" class="btn our-store-link text-uppercase filter-btn m-2" data-filter="all">doughnuts</a>
+                </div>
+            </div>
+            <!-- End of Filter buttons -->
+
+            <!-- Search Box -->
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6">
+                    <form>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text search-box" id="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="item..." id="search-item">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End of Search Box -->
+
+            <!-- Store Items -->
+            <div class="row store-items" id="store-items">
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/sweets-1.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> sweet item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">5</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/cupcake-1.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> cupcake item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">5</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/cake-1.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> cake item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">5</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/doughnut-1.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> doughnut item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">5</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/sweets-2.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> sweet item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">10</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/cupcake-2.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> cupcake item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">10</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/cake-2.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> cake item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">10</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/doughnut-2.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> doughnut item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">10</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/sweets-3.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> sweet item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">15</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/cupcake-3.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> cupcake item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">15</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/cake-3.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> cake item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">15</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+                <!-- single store item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/doughnut-3.jpeg" class="card-img-top store-img" alt="">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name"> doughnut item</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-prince"
+                                        class="font-weight-bold">15</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single store item -->
+            </div>
+            <!-- End of Store Items -->
+        </div>
+    </section>
+    <!-- End of Store Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services py-5">
+        <div class="container">
+            <div class="row">
+                <!-- single service -->
+                <div class="col-md-4 text-center py-3">
+
+                    <!-- https://www.iconfinder.com/icons/2427860/baguette_bread_bread_loaf_food_toast_icon Creative Commons (Attribution 3.0 Unported); https://www.iconfinder.com/korawan_m -->
+
+                    <img src="./images/bread-icon.png" alt="bread icon">
+                    <h6 class="text-uppercase my-3 service-title">bread</h6>
+                    <p class="w-75 mx-auto text-left servcie-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, eum cupiditate! Ad officia
+                        culpa tenetur consectetur qui blanditiis aliquam accusantium?
+                    </p>
+                </div>
+                <!-- end of single service -->
+                <!-- single service -->
+                <div class="col-md-4 text-center py-3">
+                    <!-- https://www.iconfinder.com/icons/2427875/cup_cupcake_dessertice_cream_yogurt_icon Creative Commons (Attribution 3.0 Unported); https://www.iconfinder.com/korawan_m -->
+
+                    <img src="./images/cupcake-icon.png" alt="bread icon">
+                    <h6 class="text-uppercase my-3 service-title">cupcake</h6>
+                    <p class="w-75 mx-auto text-left servcie-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, eum cupiditate! Ad
+                        officia culpa tenetur consectetur qui blanditiis aliquam accusantium?
+                    </p>
+                </div>
+                <!-- end of single service -->
+                <!-- single service -->
+                <div class="col-md-4 text-center py-3">
+                    <!-- https://www.iconfinder.com/icons/2671457/candy_sweets_treat_trick_icon  Creative Commons (Attribution 3.0 Unported);  https://www.iconfinder.com/bluelabelicons -->
+
+                    <img src="./images/candy-icon.png" alt="bread icon">
+                    <h6 class="text-uppercase my-3 service-title">candy</h6>
+                    <p class="w-75 mx-auto text-left servcie-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, eum
+                        cupiditate! Ad officia culpa tenetur consectetur qui blanditiis aliquam
+                        accusantium?
+                    </p>
+                </div>
+                <!-- end of single service -->
+            </div>
+        </div>
+    </section>
+    <!-- End of Services Section -->
+
+    <!-- Cakes -->
+    <section id="cakes" class="cakes py-5">
+        <div class="container">
+            <!-- Cake Section Title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">order <strong class="banner-title">cake</strong va></h1>
+                </div>
+            </div>
+            <!-- End of Cake Section Title -->
+            <div class="row">
+
+                <!-- Single Cake -->
+                <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+                    <h3 class="py-3">birthday cake</h3>
+                    <div class="text-muted">
+                        <p class="my-3">birthday cake with a name</p>
+                        <p class="my-3">custom ingredient</p>
+                        <p class="my-3">custom size</p>
+                        <p class="my-3">custom design</p>
+                        <button type="button" class="btn btn-pink order-cake-link text-capitalize mb-3">order
+                            now</button>
+                        <p class="text-lowercase mb-4">starting at $5</p>
+                        <img src="./images/trans-cake.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <!-- End of Single Cake -->
+
+                <!-- Single Cake -->
+                <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+                    <h3 class="py-3">custom cake</h3>
+                    <div class="text-muted">
+                        <p class="my-3">birthday cake with a name</p>
+                        <p class="my-3">custom ingredient</p>
+                        <p class="my-3">custom size</p>
+                        <p class="my-3">custom design</p>
+                        <button type="button" class="btn btn-pink order-cake-link text-capitalize mb-3">order
+                            now</button>
+                        <p class="text-lowercase mb-4">starting at $5</p>
+                        <img src="./images/trans-custom.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <!-- End of Single Cake -->
+
+                <!-- Single Cake -->
+                <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+                    <h3 class="py-3">wedding cake</h3>
+                    <div class="text-muted">
+                        <p class="my-3">birthday cake with a name</p>
+                        <p class="my-3">custom ingredient</p>
+                        <p class="my-3">custom size</p>
+                        <p class="my-3">custom design</p>
+                        <button type="button" class="btn btn-pink order-cake-link text-capitalize mb-3">order
+                            now</button>
+                        <p class="text-lowercase mb-4">starting at $5</p>
+                        <img src="./images/trans-wedding.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <!-- End of Single Cake -->
+            </div>
+        </div>
+    </section>
+    <!-- End of Cakes -->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 footer-title py-5">
+                    <h1 class="text-capitalize text-center mb-5">
+                        <strong class="banner-title">Grandma's</strong>
+                    </h1>
+                    <div class="footer-icons mt-3 d-flex justify-content-around flex-wrap">
+                        <a href="#" class="footer-icons">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer-icons">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-icons">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-icons">
+                            <i class="fab fa-google-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 footer-contact text-center text-capitalize p-5">
+                    <h1 class="mb-5">contact</h1>
+                    <p class="d-flex flex wrap">
+                        <span class="mr-4 footer-icons-contact">
+                            <i class="fas fa-map"></i>
+                        </span>
+                        <span>
+                            123 main street, San Diego CA 90101
+                        </span>
+                    </p>
+                    <p class="d-flex flex wrap">
+                        <span class="mr-4 footer-icons-contact">
+                            <i class="fas fa-phone fa-flip-horizontal"></i>
+                        </span>
+                        <span>
+                            123-456-789
+                        </span>
+                    </p>
+                    <p class="d-flex flex wrap">
+                        <span class="mr-4 footer-icons-contact">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            email@email.com
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center footer-copyright py-3 mb-0">
+            <i class="fas fa-copyright text-black mt-1"></i>
+            <p class="text-black">Copyright 2020. Only Bootstrap Website. All rights reserved. By Daniel Daréus of <a
+                    href="www.santabarbaraproduction.net">Santa Barbara Production.</a></p>
+        </div>
+    </footer>
+
+    <!-- jquery-->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap javascript-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- script js -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
